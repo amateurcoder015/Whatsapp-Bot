@@ -3,9 +3,9 @@ import requests
 
 app = Flask(__name__)
 
-ACCESS_TOKEN = "EAAe3sxY0tmQBO7j6HQmWaMtwhbbmGsu2KUleL77uD6nt2Gz1V5d534YZBtsSDZAHmR7z5Yqe4TSGqBBM8C6m8Sg7dpRqlZCZBYdeUfZCjCRCyrMOHzZAKR8kXSDdFxKZAnUxoevP3jlBS8IjinHZAmN9u5XJr5R5A3EGZBlxS76hlmICZBkXM8V82ESflANVVysMYSxZCbpLOkQZCMVUIkGhDnRFKAmVmYMZD"
-PHONE_NUMBER_ID = "616020401598082"
-VERIFY_TOKEN = "hello"  # You can make this up
+ACCESS_TOKEN = "**"
+PHONE_NUMBER_ID = "**"
+VERIFY_TOKEN = "**"  # You can make this up
 
 @app.route('/webhook', methods=['GET', 'POST'])
 def webhook():
