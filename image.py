@@ -1,10 +1,10 @@
 import requests
 import csv
 
-PHONE_NUMBER_ID = "616020401598082"
-ACCESS_TOKEN = "EAAe3sxY0tmQBO7j6HQmWaMtwhbbmGsu2KUleL77uD6nt2Gz1V5d534YZBtsSDZAHmR7z5Yqe4TSGqBBM8C6m8Sg7dpRqlZCZBYdeUfZCjCRCyrMOHzZAKR8kXSDdFxKZAnUxoevP3jlBS8IjinHZAmN9u5XJr5R5A3EGZBlxS76hlmICZBkXM8V82ESflANVVysMYSxZCbpLOkQZCMVUIkGhDnRFKAmVmYMZD"
+PHONE_NUMBER_ID = "**"
+ACCESS_TOKEN = "**"
 API_VERSION = "v22.0"
-CSV_FILE = "/Users/TonyStark/Desktop/vsc/bot/list2final.csv"
+CSV_FILE = "csv_file_location"
 
 recipients = []
 with open(CSV_FILE, newline='', encoding='utf-8') as csvfile:
