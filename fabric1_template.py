@@ -2,11 +2,11 @@ import requests
 import csv
 
 # 🔵 Replace with your actual data
-PHONE_NUMBER_ID = "616020401598082"
-ACCESS_TOKEN = "EAAe3sxY0tmQBO7j6HQmWaMtwhbbmGsu2KUleL77uD6nt2Gz1V5d534YZBtsSDZAHmR7z5Yqe4TSGqBBM8C6m8Sg7dpRqlZCZBYdeUfZCjCRCyrMOHzZAKR8kXSDdFxKZAnUxoevP3jlBS8IjinHZAmN9u5XJr5R5A3EGZBlxS76hlmICZBkXM8V82ESflANVVysMYSxZCbpLOkQZCMVUIkGhDnRFKAmVmYMZD"
+PHONE_NUMBER_ID = "**"
+ACCESS_TOKEN = "**"
 TEMPLATE_NAME = "fabric1image"  # should be approved in WhatsApp Manager
 API_VERSION = "v22.0"
-CSV_FILE = "/Users/TonyStark/Desktop/vsc/bot/list2final.csv"
+CSV_FILE = "CSV_file_location"
 
 # 🔵 List of recipients: (phone number, name)
 recipients = []
