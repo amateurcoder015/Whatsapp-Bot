@@ -1,0 +1,52 @@
+import requests
+import csv
+
+# 🔵 Replace with your actual data
+PHONE_NUMBER_ID = "616020401598082"
+ACCESS_TOKEN = "EAAe3sxY0tmQBO3ZB3oEHvCYFaDIIvJwPgDyVcZAO6GLlZCXjf3uYXAyVRYZCbAXtFj8iStxAlszagESnLgqG41ZC6jmLXOHzlue7JkZBIyOB0nZClZArixipPlu7ZBG9MAxKuq3TmAi4K3oF2RJcQAdkprLgNZCeHuJmwY4U0aEvhJinPSMEoukV17hZBK6NPoVUEJ97ZBec1oyOJKvY33BzIVQ6w0mhAgAJ"
+TEMPLATE_NAME = "start"  # should be approved in WhatsApp Manager
+API_VERSION = "v22.0"
+CSV_FILE = "/Users/TonyStark/Desktop/vsc/bot/list7final.csv"
+
+# 🔵 List of recipients: (phone number, name)
+recipients = []
+with open(CSV_FILE, newline='', encoding='utf-8') as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+        name = row['Name'].strip()
+        number = row['Number'].replace("+", "").replace(" ", "").strip()
+        recipients.append((number, name))
+
+# URL
+url = f"https://graph.facebook.com/{API_VERSION}/{PHONE_NUMBER_ID}/messages"
+
+# Send messages
+for number, name in recipients:
+    payload = {
+        "messaging_product": "whatsapp",
+        "to": number,
+        "type": "template",
+        "template": {
+            "name": TEMPLATE_NAME,
+            "language": {"code": "en_US"},
+            "components": [
+                {
+                "type": "header",
+                "parameters": [
+                    { "type": "image", "image": { "link": "https://nakodatextilesmills.com/wp-content/uploads/2024/08/Untitled-design-2024-08-12T010945.850.png" } }
+                    ]
+                }
+            ]
+        }
+    }
+
+    headers = {
+        "Authorization": f"Bearer {ACCESS_TOKEN}",
+        "Content-Type": "application/json"
+    }
+
+    response = requests.post(url, headers=headers, json=payload)
+
+    print(f"Sending to {name} ({number}) - Status: {response.status_code}")
+    if response.status_code != 200:
+        print("Error:", response.json())
