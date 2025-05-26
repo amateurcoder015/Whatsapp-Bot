@@ -1,18 +1,18 @@
 import requests
 
 # 🔵 Replace with your actual data
-PHONE_NUMBER_ID = "616020401598082"
-ACCESS_TOKEN = "EAAe3sxY0tmQBO0tcqdBCoLnWUUS8D9hCBZB7p7S1Mn8YSvnPNoGN64iZAupKrIxS54pNWl881gcj7zfBcyZAZBxhqUoKnY9HybdZAPYUC85woZAiQZC8f3jrvRrpeOKw1qd6KHqrACDgvIw2nxdUgJAxQOggU58FrLdMRNF7fYapgnP3AIkaRj8pZBN0Adjdp7QHa8pxAPbFGMbsYfhWSKS5NAjn220ZD"
+PHONE_NUMBER_ID = "**"
+ACCESS_TOKEN = "**"
 TEMPLATE_NAME = "hello_world"  # should be approved in WhatsApp Manager
 API_VERSION = "v22.0"
 
 # 🔵 List of recipients: (phone number, name)
 recipients = [
-    ("919323180023", "Shashank"),
-    ("919619141433", "Ravi"),
-    ("919152054089", "Aarti"),
-    ("919619941726", "Nikhil"),
-    ("919372457081", "Meera")
+    ("**", "Shashank"),
+    ("**", "Ravi"),
+    ("**", "Aarti"),
+    ("**", "Nikhil"),
+    ("**", "Meera")
 ]
 
 # URL
